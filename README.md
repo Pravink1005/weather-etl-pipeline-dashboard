@@ -256,8 +256,8 @@ streamlit run dashboard.py
 
 ## 👨‍💻 Author
 
-**Your Name**
-GitHub: https://github.com/your-username
+**Pravin Kumar A**
+GitHub: https://github.com/Pravink1005
 
 ---
 
