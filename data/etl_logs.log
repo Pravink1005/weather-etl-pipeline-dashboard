@@ -1,0 +1,81 @@
+2026-04-16 15:34:02,793 | INFO | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-16 15:34:02,793 | INFO | Added job "job" to job store "default"
+2026-04-16 15:34:02,793 | INFO | Scheduler started
+2026-04-16 15:35:02,794 | INFO | Running job "job (trigger: interval[0:01:00], next run at: 2026-04-16 15:35:02 IST)" (scheduled at 2026-04-16 15:35:02.792994+05:30)
+2026-04-16 15:35:02,794 | INFO | ETL Job Started
+2026-04-16 15:35:04,406 | INFO | Data inserted successfully
+2026-04-16 15:35:04,406 | INFO | Job "job (trigger: interval[0:01:00], next run at: 2026-04-16 15:36:02 IST)" executed successfully
+2026-04-16 15:36:02,793 | INFO | Running job "job (trigger: interval[0:01:00], next run at: 2026-04-16 15:37:02 IST)" (scheduled at 2026-04-16 15:36:02.792994+05:30)
+2026-04-16 15:36:02,794 | INFO | ETL Job Started
+2026-04-16 15:36:04,463 | INFO | Data inserted successfully
+2026-04-16 15:36:04,464 | INFO | Job "job (trigger: interval[0:01:00], next run at: 2026-04-16 15:37:02 IST)" executed successfully
+2026-04-16 15:37:02,793 | INFO | Running job "job (trigger: interval[0:01:00], next run at: 2026-04-16 15:38:02 IST)" (scheduled at 2026-04-16 15:37:02.792994+05:30)
+2026-04-16 15:37:02,794 | INFO | ETL Job Started
+2026-04-16 15:37:04,544 | INFO | Data inserted successfully
+2026-04-16 15:37:04,545 | INFO | Job "job (trigger: interval[0:01:00], next run at: 2026-04-16 15:38:02 IST)" executed successfully
+2026-04-16 15:38:02,793 | INFO | Running job "job (trigger: interval[0:01:00], next run at: 2026-04-16 15:39:02 IST)" (scheduled at 2026-04-16 15:38:02.792994+05:30)
+2026-04-16 15:38:02,794 | INFO | ETL Job Started
+2026-04-16 15:38:04,252 | INFO | Data inserted successfully
+2026-04-16 15:38:04,253 | INFO | Job "job (trigger: interval[0:01:00], next run at: 2026-04-16 15:39:02 IST)" executed successfully
+2026-04-16 15:39:02,793 | INFO | Running job "job (trigger: interval[0:01:00], next run at: 2026-04-16 15:40:02 IST)" (scheduled at 2026-04-16 15:39:02.792994+05:30)
+2026-04-16 15:39:02,794 | INFO | ETL Job Started
+2026-04-16 15:39:04,339 | INFO | Data inserted successfully
+2026-04-16 15:39:04,340 | INFO | Job "job (trigger: interval[0:01:00], next run at: 2026-04-16 15:40:02 IST)" executed successfully
+2026-04-16 15:39:27,442 | INFO | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-16 15:39:27,443 | INFO | Added job "job" to job store "default"
+2026-04-16 15:39:27,443 | INFO | Scheduler started
+2026-04-16 16:02:52,932 | INFO | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-16 16:02:52,933 | INFO | Added job "job" to job store "default"
+2026-04-16 16:02:52,933 | INFO | Scheduler started
+2026-04-16 16:03:52,933 | INFO | Running job "job (trigger: interval[0:01:00], next run at: 2026-04-16 16:03:52 IST)" (scheduled at 2026-04-16 16:03:52.932822+05:30)
+2026-04-16 16:03:52,933 | INFO | ETL Job Started
+2026-04-16 16:03:54,694 | INFO | Data inserted successfully
+2026-04-16 16:03:54,695 | INFO | Job "job (trigger: interval[0:01:00], next run at: 2026-04-16 16:04:52 IST)" executed successfully
+2026-04-16 16:19:25,655 | INFO | ETL Started
+2026-04-16 16:19:27,377 | INFO | ETL Success
+2026-04-16 16:19:48,653 | INFO | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-16 16:19:48,654 | INFO | Added job "job" to job store "default"
+2026-04-16 16:19:48,655 | INFO | Scheduler started
+2026-04-16 16:20:48,654 | INFO | Running job "job (trigger: interval[0:01:00], next run at: 2026-04-16 16:20:48 IST)" (scheduled at 2026-04-16 16:20:48.653762+05:30)
+2026-04-16 16:20:48,655 | INFO | ETL Job Started
+2026-04-16 16:20:50,351 | INFO | Data inserted successfully
+2026-04-16 16:20:50,351 | INFO | Job "job (trigger: interval[0:01:00], next run at: 2026-04-16 16:21:48 IST)" executed successfully
+2026-04-16 16:21:48,654 | INFO | Running job "job (trigger: interval[0:01:00], next run at: 2026-04-16 16:22:48 IST)" (scheduled at 2026-04-16 16:21:48.653762+05:30)
+2026-04-16 16:21:48,654 | INFO | ETL Job Started
+2026-04-16 16:21:50,342 | INFO | Data inserted successfully
+2026-04-16 16:21:50,343 | INFO | Job "job (trigger: interval[0:01:00], next run at: 2026-04-16 16:22:48 IST)" executed successfully
+2026-04-16 16:22:48,654 | INFO | Running job "job (trigger: interval[0:01:00], next run at: 2026-04-16 16:23:48 IST)" (scheduled at 2026-04-16 16:22:48.653762+05:30)
+2026-04-16 16:22:48,654 | INFO | ETL Job Started
+2026-04-16 16:22:50,443 | INFO | Data inserted successfully
+2026-04-16 16:22:50,444 | INFO | Job "job (trigger: interval[0:01:00], next run at: 2026-04-16 16:23:48 IST)" executed successfully
+2026-04-16 16:23:48,654 | INFO | Running job "job (trigger: interval[0:01:00], next run at: 2026-04-16 16:24:48 IST)" (scheduled at 2026-04-16 16:23:48.653762+05:30)
+2026-04-16 16:23:48,654 | INFO | ETL Job Started
+2026-04-16 16:23:50,516 | INFO | Data inserted successfully
+2026-04-16 16:23:50,517 | INFO | Job "job (trigger: interval[0:01:00], next run at: 2026-04-16 16:24:48 IST)" executed successfully
+2026-04-16 16:24:48,654 | INFO | Running job "job (trigger: interval[0:01:00], next run at: 2026-04-16 16:25:48 IST)" (scheduled at 2026-04-16 16:24:48.653762+05:30)
+2026-04-16 16:24:48,654 | INFO | ETL Job Started
+2026-04-16 16:24:50,710 | INFO | Data inserted successfully
+2026-04-16 16:24:50,711 | INFO | Job "job (trigger: interval[0:01:00], next run at: 2026-04-16 16:25:48 IST)" executed successfully
+2026-04-17 05:14:54,971 | INFO | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-17 05:14:54,973 | INFO | Added job "job" to job store "default"
+2026-04-17 05:14:54,973 | INFO | Scheduler started
+2026-04-17 05:44:54,972 | INFO | Running job "job (trigger: interval[0:30:00], next run at: 2026-04-17 05:44:54 IST)" (scheduled at 2026-04-17 05:44:54.971416+05:30)
+2026-04-17 05:44:54,973 | INFO | ETL Job Started
+2026-04-17 05:45:08,065 | INFO | Data inserted successfully
+2026-04-17 05:45:08,066 | INFO | Job "job (trigger: interval[0:30:00], next run at: 2026-04-17 06:14:54 IST)" executed successfully
+2026-04-17 06:14:54,972 | INFO | Running job "job (trigger: interval[0:30:00], next run at: 2026-04-17 06:44:54 IST)" (scheduled at 2026-04-17 06:14:54.971416+05:30)
+2026-04-17 06:14:54,972 | INFO | ETL Job Started
+2026-04-17 06:15:07,123 | INFO | Data inserted successfully
+2026-04-17 06:15:07,124 | INFO | Job "job (trigger: interval[0:30:00], next run at: 2026-04-17 06:44:54 IST)" executed successfully
+2026-04-17 06:44:54,972 | INFO | Running job "job (trigger: interval[0:30:00], next run at: 2026-04-17 07:14:54 IST)" (scheduled at 2026-04-17 06:44:54.971416+05:30)
+2026-04-17 06:44:54,972 | INFO | ETL Job Started
+2026-04-17 06:45:08,363 | INFO | Data inserted successfully
+2026-04-17 06:45:08,364 | INFO | Job "job (trigger: interval[0:30:00], next run at: 2026-04-17 07:14:54 IST)" executed successfully
+2026-04-17 07:14:54,972 | INFO | Running job "job (trigger: interval[0:30:00], next run at: 2026-04-17 07:44:54 IST)" (scheduled at 2026-04-17 07:14:54.971416+05:30)
+2026-04-17 07:14:54,972 | INFO | ETL Job Started
+2026-04-17 07:15:08,048 | INFO | Data inserted successfully
+2026-04-17 07:15:08,049 | INFO | Job "job (trigger: interval[0:30:00], next run at: 2026-04-17 07:44:54 IST)" executed successfully
+2026-04-17 07:44:54,972 | INFO | Running job "job (trigger: interval[0:30:00], next run at: 2026-04-17 08:14:54 IST)" (scheduled at 2026-04-17 07:44:54.971416+05:30)
+2026-04-17 07:44:54,972 | INFO | ETL Job Started
+2026-04-17 07:45:08,410 | INFO | Data inserted successfully
+2026-04-17 07:45:08,410 | INFO | Job "job (trigger: interval[0:30:00], next run at: 2026-04-17 08:14:54 IST)" executed successfully
