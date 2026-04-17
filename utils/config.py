@@ -1,5 +1,5 @@
 # 🌦️ OpenWeatherMap API Key
-API_KEY = "a5585cdafbb15169bf790e5cde53e029"
+API_KEY = "your_openweather_api_key"
 
 CITIES = [
     "Chennai", "Coimbatore", "Madurai", "Trichy",
