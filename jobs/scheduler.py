@@ -3,13 +3,9 @@ from core.extract import extract_data
 from core.transform import transform_data
 from core.load import load_data, create_table
 from utils.logger import log_info, log_error
+from utils.config import CITIES
 from datetime import datetime
 
-CITIES = [
-    "Chennai", "Coimbatore", "Madurai", "Trichy",
-    "Salem", "Tirunelveli", "Erode", "Vellore",
-    "Thoothukudi", "Dindigul"
-]
 
 def job():
     log_info("ETL Job Started")
@@ -42,7 +38,7 @@ def job():
 
 
 scheduler = BlockingScheduler()
-scheduler.add_job(job, 'interval', minutes=30)
+scheduler.add_job(job, 'interval', hours=1)
 
 print("🚀 Scheduler started (logging enabled)")
 scheduler.start()

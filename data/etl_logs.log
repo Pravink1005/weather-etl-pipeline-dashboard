@@ -79,3 +79,17 @@
 2026-04-17 07:44:54,972 | INFO | ETL Job Started
 2026-04-17 07:45:08,410 | INFO | Data inserted successfully
 2026-04-17 07:45:08,410 | INFO | Job "job (trigger: interval[0:30:00], next run at: 2026-04-17 08:14:54 IST)" executed successfully
+2026-10-05 12:48:49,022 | INFO | ETL Started
+2026-10-05 12:48:58,839 | INFO | ETL Success
+2026-10-05 16:18:00,812 | INFO | ETL Started
+2026-10-05 16:18:01,232 | ERROR | ETL Failed: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "weather_app"
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-10-05 16:19:04,526 | INFO | ETL Started
+2026-10-05 16:19:14,533 | INFO | ETL Success
+2026-10-05 17:13:40,765 | INFO | Current weather refresh started
+2026-10-05 17:13:50,623 | INFO | Current weather refresh succeeded
+2026-10-05 17:14:19,889 | INFO | Current weather refresh started
+2026-10-05 17:14:29,326 | INFO | Current weather refresh succeeded
+2026-10-05 17:15:06,075 | INFO | Current weather refresh started
+2026-10-05 17:15:15,817 | INFO | Current weather refresh succeeded

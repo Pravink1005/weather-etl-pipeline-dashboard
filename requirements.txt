@@ -1,4 +1,8 @@
 requests
 pandas
-mysql-connector-python
 streamlit
+plotly
+APScheduler
+SQLAlchemy
+psycopg2-binary
+python-dotenv

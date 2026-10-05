@@ -1,6 +1,3 @@
-# 🌦️ OpenWeatherMap API Key
-API_KEY = "your_openweather_api_key"
-
 CITIES = [
     "Chennai", "Coimbatore", "Madurai", "Trichy",
     "Salem", "Tirunelveli", "Erode", "Vellore",
@@ -20,5 +17,6 @@ CITY_COORDS = {
     "Dindigul": {"lat": 10.3673, "lon": 77.9803}
 }
 
-# 🗄️ MySQL Database Configuration
-DB_PATH = "data/weather.db"
+DATABASE_URL_ENV = "DATABASE_URL"
+__all__ = ["CITIES", "CITY_COORDS", "DATABASE_URL_ENV"]
+

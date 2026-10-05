@@ -1,15 +1,8 @@
-import sys
-import os
 import streamlit as st
-import sqlite3
-import pandas as pd
-from utils.config import DB_PATH
-
-
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+from utils.database import read_query
 
 def get_latest_city_data(df, city):
-    city_df = df[df["city"] == city].sort_values("created_at")
+    city_df = df[df["city"] == city].sort_values("observed_at")
     return city_df.iloc[-1]  # ONLY latest record
 
 
@@ -17,9 +10,7 @@ def compare_page():
 
     st.title("⚖️ Compare Weather (Latest Data Only)")
 
-    conn = sqlite3.connect(DB_PATH)
-    df = pd.read_sql("SELECT * FROM weather_data", conn)
-    conn.close()
+    df = read_query("SELECT * FROM bi.weather_observations")
 
     if df.empty:
         st.warning("No data available. Please fetch weather first.")
@@ -42,7 +33,7 @@ def compare_page():
 
         with col1:
             st.subheader(city1)
-            st.write(f"🕒 Time: {d1['created_at']}")
+            st.write(f"🕒 Time: {d1['observed_at']}")
             st.metric("🌡️ Temperature", f"{round(d1['temperature'], 1)} °C")
             st.metric("💧 Humidity", f"{d1['humidity']} %")
             st.metric("🌍 Pressure", f"{d1['pressure']} hPa")
@@ -50,7 +41,7 @@ def compare_page():
 
         with col2:
             st.subheader(city2)
-            st.write(f"🕒 Time: {d2['created_at']}")
+            st.write(f"🕒 Time: {d2['observed_at']}")
             st.metric("🌡️ Temperature", f"{round(d2['temperature'], 1)} °C")
             st.metric("💧 Humidity", f"{d2['humidity']} %")
             st.metric("🌍 Pressure", f"{d2['pressure']} hPa")
