@@ -235,26 +235,13 @@ Then update `DATABASE_URL` in `.env` with your PostgreSQL instance.
 python -m streamlit run ui/dashboard.py
 ```
 
----
+### 5️⃣ Run the hourly ETL scheduler
 
-## 🚀 Production deployment with GitHub Actions
-
-The repository includes a deploy-ready Docker image and GitHub Actions workflows for validation and publishing the app image.
-
-### Docker build
-
-```bash
-docker build -t weather-etl-dashboard .
-docker run --rm -p 8501:8501 --env-file .env weather-etl-dashboard
+```powershell
+python -m jobs.scheduler
 ```
 
-### GitHub Actions
-
-- CI validation runs on every push and pull request.
-- The deploy workflow publishes a Docker image to GitHub Container Registry (GHCR).
-- To enable live deployment to a host such as Azure App Service or another container platform, add the required repository secrets and update the workflow target.
-
-The deployment workflow file is stored in `.github/workflows/deploy.yml` and is ready to be connected to your hosting platform.
+This keeps the weather extractor running every 1 hour.
 
 ### 3️⃣ Create and Configure PostgreSQL
 
