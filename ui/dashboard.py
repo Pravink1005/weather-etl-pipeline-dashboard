@@ -84,6 +84,19 @@ def get_data(query, params=None):
     return read_query(query, params)
 
 
+def build_region_snapshot(df):
+    if df.empty:
+        return df
+    snapshot = df.sort_values("observed_at").groupby("city").tail(1).copy()
+    if "observed_at" in snapshot.columns:
+        snapshot["observed_at"] = pd.to_datetime(snapshot["observed_at"])
+    return snapshot
+
+
+def format_temperature(value):
+    return f"{float(value):.1f} °C"
+
+
 df_all = get_data("SELECT * FROM bi.weather_observations")
 
 if "observed_at" in df_all.columns:
@@ -125,9 +138,14 @@ if menu == "🏠 Dashboard":
         )
         st.info("No observations yet. Run `python -m jobs.pipeline` to load the first weather report.")
     else:
-        latest = df_all.sort_values("observed_at").groupby("city").tail(1).copy()
+        latest = build_region_snapshot(df_all)
         latest_time_ist = pd.Timestamp(latest["observed_at"].max()).tz_convert("Asia/Kolkata")
         warmest = latest.loc[latest["temperature"].idxmax()]
+        coolest = latest.loc[latest["temperature"].idxmin()]
+
+        average_temperature = latest["temperature"].mean()
+        average_humidity = latest["humidity"].mean()
+        average_wind = latest["wind_speed"].mean()
 
         st.markdown(
             '<section class="report-hero"><div><div class="hero-kicker">Tamil Nadu / Field report</div>'
@@ -157,9 +175,15 @@ if menu == "🏠 Dashboard":
 
         col1, col2, col3, col4 = st.columns(4)
         col1.metric("Stations reporting", latest["city"].nunique())
-        col2.metric("Mean temperature", f"{latest['temperature'].mean():.1f} °C")
-        col3.metric("Warmest station", warmest["city"], f"{warmest['temperature']:.1f} °C")
-        col4.metric("Records collected", f"{len(df_all):,}")
+        col2.metric("Mean temperature", format_temperature(average_temperature))
+        col3.metric("Warmest station", warmest["city"], format_temperature(warmest["temperature"]))
+        col4.metric("Coolest station", coolest["city"], format_temperature(coolest["temperature"]))
+
+        st.markdown("---")
+        c1, c2, c3 = st.columns(3)
+        c1.metric("Mean humidity", f"{average_humidity:.0f} %")
+        c2.metric("Mean wind", f"{average_wind:.1f} m/s")
+        c3.metric("Records collected", f"{len(df_all):,}")
 
         st.subheader("Temperature across stations")
         st.markdown('<p class="section-note">Latest completed hourly reading · Celsius</p>', unsafe_allow_html=True)
@@ -196,6 +220,21 @@ if menu == "🏠 Dashboard":
             yaxis=dict(title="", showgrid=False, tickfont=dict(size=13)),
         )
         st.plotly_chart(temperature_chart, use_container_width=True, config={"displayModeBar": False})
+
+        st.subheader("Regional temperature trend")
+        trend = (
+            df_all[["observed_at", "temperature"]]
+            .dropna()
+            .copy()
+        )
+        trend["observed_at"] = pd.to_datetime(trend["observed_at"])
+        trend = (
+            trend.set_index("observed_at")
+            .resample("6H")
+            .mean()
+            .reset_index()
+        )
+        st.line_chart(trend.set_index("observed_at")["temperature"])
 
         st.subheader("Latest city readings")
         snapshot = latest[[

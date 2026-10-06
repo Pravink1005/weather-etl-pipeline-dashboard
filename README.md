@@ -219,6 +219,43 @@ In PowerShell, activate the environment and install packages:
 python -m pip install -r requirements.txt
 ```
 
+### 3️⃣ Configure Environment
+
+Copy the sample environment file and update the PostgreSQL connection string:
+
+```powershell
+Copy-Item .env.example .env
+```
+
+Then update `DATABASE_URL` in `.env` with your PostgreSQL instance.
+
+### 4️⃣ Run the app
+
+```powershell
+python -m streamlit run ui/dashboard.py
+```
+
+---
+
+## 🚀 Production deployment with GitHub Actions
+
+The repository includes a deploy-ready Docker image and GitHub Actions workflows for validation and publishing the app image.
+
+### Docker build
+
+```bash
+docker build -t weather-etl-dashboard .
+docker run --rm -p 8501:8501 --env-file .env weather-etl-dashboard
+```
+
+### GitHub Actions
+
+- CI validation runs on every push and pull request.
+- The deploy workflow publishes a Docker image to GitHub Container Registry (GHCR).
+- To enable live deployment to a host such as Azure App Service or another container platform, add the required repository secrets and update the workflow target.
+
+The deployment workflow file is stored in `.github/workflows/deploy.yml` and is ready to be connected to your hosting platform.
+
 ### 3️⃣ Create and Configure PostgreSQL
 
 Install and start PostgreSQL. In pgAdmin or `psql`, create a database named `weather_etl` and an application login named `weather_app`, and make `weather_app` the database owner. Copy the sample environment file:

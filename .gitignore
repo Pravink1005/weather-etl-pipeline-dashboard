@@ -19,3 +19,5 @@ dist/
 # Local ETL outputs
 data/*.log
 data/*.db
+
+*.log
